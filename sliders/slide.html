@@ -24,6 +24,13 @@
             <div class="slide" id="slide-4">
                 <img src="./Img/pht4.jpg" alt="image-4">
             </div>
+            
+            <div class="slide" id="slide-2">
+                <img src="./Img/pht2.jpg" alt="image-2">
+            </div>
+            <div class="slide" id="slide-3">
+                <img src="./Img/pht3.jpeg" alt="image-3">
+            </div>
         </div>
 
         <!-- Controls -->
@@ -31,7 +38,6 @@
             <button id="button-1" class="button">Image 1</button>
             <button id="button-2" class="button">Image 2</button>
             <button id="button-3" class="button">Image 3</button>
-            <button id="button-4" class="button">Image 4</button>
         </div>
     </div>
     <script>
@@ -64,19 +70,19 @@
             }, 5000)
         }
 
-        let interval = setAutoSlide();
+        let interval3 = setAutoSlide();
         const buttons = document.querySelectorAll('.button');
 
         buttons.forEach((button, idx) => {
             button.addEventListener('click', () => {
-                clearInterval(interval);
+                clearInterval(interval3);
                 // clearInterval
 
                 currentActive = idx + 1;
                 showActiveSlide();
 
                 // startInterval
-                interval = setAutoSlide()
+                interval3 = setAutoSlide()
             });
         });
         
